@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 
   s.version      = "0.1.6"
 
-  s.summary      = ""
+  s.summary      = "Library wrap of web3.js"
 
   s.description  = "frameworks of web3js for iOS"
 
