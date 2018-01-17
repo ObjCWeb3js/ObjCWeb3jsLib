@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script type="text/javascript" src="./js/lib/ABI.js"></script>
+<script type="text/javascript" src="./js/lib/ethereumjs-all.js"></script>
+<script type="text/javascript" src="./js/lib/wzrdin.js"></script>
+<script type="text/javascript" src="./js/lib/keythereum.min.js"></script>
+<script type="text/javascript" src="./js/lib/lightwallet.min.js"></script>
+<script type="text/javascript" src="./js/lib/web3js0.16.0.js"></script>
+<script type="text/javascript" src="./js/lib/ethers-wallet.min.js"></script>
+
+<script type="text/javascript" src="./js/wrap/transactionSender.js"></script>
+<script type="text/javascript" src="./js/wrap/contractManager.js"></script>
+<script type="text/javascript" src="./js/wrap/nativeCaller.js"></script>
+<script type="text/javascript" src="./js/wrap/WebThreeRLP.js"></script>
+
+
+<head>
+<script type="text/javascript">
+
+	window.onload = function() {
+		var provideAddr = "http://192.168.16.30:8080";
+		var web3 = new Web3(new Web3.providers.HttpProvider(provideAddr));
+		console.log("");
+		WebThreeRLP.test();
+	}
+</script>
+    <body></body>
+</head>
+
+</html>

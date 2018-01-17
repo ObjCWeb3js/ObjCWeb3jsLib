@@ -1,0 +1,6 @@
+framework module ObjCWeb3js {
+  umbrella header "ObjCWeb3js.h"
+
+  export *
+  module * { export * }
+}
