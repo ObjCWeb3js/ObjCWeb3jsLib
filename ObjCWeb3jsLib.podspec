@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "9.0"
 
-  s.source       = { :http => "http://github.com/ObjCWeb3js/ObjCWeb3jsLib.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/ObjCWeb3js/ObjCWeb3jsLib.git", :tag => "#{s.version}" }
 
   s.vendored_frameworks = "ObjCWeb3js.framework"
 
