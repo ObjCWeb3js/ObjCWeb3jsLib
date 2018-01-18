@@ -17,9 +17,9 @@
 
 
 /**
- 完成加载合约
+ 服务初始化完成
  */
-- (void)didFinishLoadContract;
+- (void)didServiceInitDone;
 
 @end
 
@@ -100,8 +100,13 @@
 
 
 /**
- 向合约发送交易
-
+ 向合约发送交易并轮询获取交易回执
+ 
+ 提示：为保证回执能够正常解析，Solidity编写的合约对应的event必须按照以下格式定义才能读取到对应回执，否则会以超时的结果返回
+ event Notify(uint _errno, string _info,string _data);
+ 
+ 如果要读取
+ 
  @param contract 合约名
  @param methodName 方法名
  @param arguments 合约参数列表
@@ -316,6 +321,14 @@
  @param completion 完成回调 返回的签名数据字段是 CommonResponse对象的dataObj字段，类型为NSString *
  */
 - (void)signRawTransaction:(RawTransaction *)transaction completion:(ObjCWeb3jCompletion)completion;
+
+/**
+ 解码Solidity event事件对于的编码
+ @param params 类型数组 目前支持数据类型见http://solidity.readthedocs.io/en/develop/types.html 例子：@['address','int256','uint256']
+ @param data event返回的logs数组下的data字段
+ @param completion 完成回调
+ */
+- (void)decodeParams:(NSArray <NSString *> *)params data:(NSString *)data completion:(void (^)(commonErrorCode errorCode,NSString * errorMsg,NSString * data))completion;
 
 #pragma mark - web3.js APIS
 

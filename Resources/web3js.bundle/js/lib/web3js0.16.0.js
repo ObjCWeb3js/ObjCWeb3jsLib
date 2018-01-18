@@ -833,7 +833,7 @@
             new SolidityTypeReal(),
             new SolidityTypeUReal()
         ]);
-
+        window.coder = coder;
         module.exports = coder;
 
     }, { "./address": 5, "./bool": 6, "./bytes": 7, "./dynamicbytes": 9, "./formatters": 10, "./int": 11, "./real": 13, "./string": 14, "./uint": 16, "./ureal": 17 }],

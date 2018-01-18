@@ -57,11 +57,6 @@ typedef enum : NSUInteger {
 
 typedef void(^commonCallbackWithIntRet)(id result);
 
-//#define NSLog(FORMAT, ...)\
-//if (YES) {\
-//fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);\
-//} else {\
-//}
 
 @class CommonResponse;
 typedef void(^ObjCWeb3jCompletion)(CommonResponse * response);

@@ -99,7 +99,7 @@
 
     }
 
-    TransactionSender.signWithPrivateKey = function(privateKeyHex,nonceHex, gasPriceHex, gasLimitHex, to, valueHex, data) {
+    TransactionSender.signWithPrivateKey = function(privateKeyHex, nonceHex, gasPriceHex, gasLimitHex, to, valueHex, data) {
 
         try {
 
@@ -125,7 +125,7 @@
 
 
             var privateKeyTxt = privateKeyHex;
-            
+
             var privateKey = new Buffer(privateKeyTxt, 'hex');
             tx.sign(privateKey);
 
@@ -375,7 +375,10 @@
 
 
 
-
+    TransactionSender.eventDecodeParams = function(params, data) {
+        var resultObject = window.coder.decodeParams(params, data);
+        return JSON.stringify(resultObject);
+    }
 
 
 
